@@ -1,0 +1,30 @@
+//
+//  FactModel.swift
+//  FunFacts
+//
+//  Created by Ken Alger on 6/21/16.
+//  Copyright © 2016 Ken W. Alger. All rights reserved.
+//
+
+import GameKit
+
+struct FactModel {
+    let facts = [
+        "Ants stretch when they wake up in the morning.",
+        "Ostritches can run faster than horses.",
+        "Olympic gold medals are actually made mostly of silver.",
+        "You are born with 300 borns; by the time you are an adult you will have 206.",
+        "It takes about 8 minutes for light from the Sun to reach Earth.",
+        "Some bamboo plants can grow almost a meter in just one day.",
+        "The state of Florida is bigger than England.",
+        "Some penguins can leap 2-3 meters out of the water.",
+        "On average, it takes 66 dyas to form a new habit.",
+        "Mammoths still walked the Earth when the Great Pyramid was being built."
+    ]
+    
+    func getRandomFact() -> String {
+        let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(facts.count)
+        return facts[randomNumber]
+    }
+    
+}
