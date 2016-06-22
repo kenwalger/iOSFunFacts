@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,35 +15,75 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some interesting fact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qcd-fA-9ZL">
-                                <rect key="frame" x="20" y="213" width="335" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fta-6k-Dmi">
-                                <rect key="frame" x="103" y="319" width="168" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fta-6k-Dmi">
+                                <rect key="frame" x="40" y="480" width="520" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="AR5-tB-ktA"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="y07-sq-TYg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
                                 <state key="normal" title="Show another Fun Fact"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AR5-tB-ktA"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="showNextFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="9W6-Pb-71z"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2P7-vd-yA0">
+                                <rect key="frame" x="40" y="126" width="118" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qcd-fA-9ZL">
+                                <rect key="frame" x="40" y="267" width="520" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="58F-wp-B2h"/>
+                                </constraints>
+                                <string key="text">You are born with 300 bones; by the time you are an adult you will have 206. You are born with 300 bones; by the time you are an adult you will have 206.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.73333333333333328" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qcd-fA-9ZL" firstAttribute="trailing" secondItem="fta-6k-Dmi" secondAttribute="trailing" id="2CO-kS-ows"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fta-6k-Dmi" secondAttribute="bottom" constant="80" id="7Dn-Z2-ChR"/>
+                            <constraint firstItem="Qcd-fA-9ZL" firstAttribute="top" secondItem="2P7-vd-yA0" secondAttribute="bottom" constant="120" id="9MQ-vN-3Uk"/>
+                            <constraint firstItem="Qcd-fA-9ZL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BLy-6w-aLw"/>
+                            <constraint firstItem="2P7-vd-yA0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="106" id="EBe-lu-F55"/>
+                            <constraint firstItem="Qcd-fA-9ZL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Jqm-GA-PWZ"/>
+                            <constraint firstItem="fta-6k-Dmi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Q83-Of-BtC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qcd-fA-9ZL" secondAttribute="trailing" constant="20" id="VWl-yV-rtS"/>
+                            <constraint firstItem="2P7-vd-yA0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="lJr-i1-cma"/>
+                            <constraint firstItem="Qcd-fA-9ZL" firstAttribute="leading" secondItem="2P7-vd-yA0" secondAttribute="leading" id="wah-TV-ka8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fta-6k-Dmi" secondAttribute="trailing" constant="20" id="wyf-f8-hew"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9MQ-vN-3Uk"/>
+                                <exclude reference="wah-TV-ka8"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="funFactButton" destination="fta-6k-Dmi" id="rwI-67-F2e"/>
                         <outlet property="funFactLabel" destination="Qcd-fA-9ZL" id="0il-ST-YkA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="259.5" y="306.5"/>
+            <point key="canvasLocation" x="259" y="306"/>
         </scene>
     </scenes>
 </document>
